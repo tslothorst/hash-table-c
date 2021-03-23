@@ -16,8 +16,9 @@ typedef struct {
 typedef enum { memory_allocation_failed  } error;
 
 ht_hash_table* ht_new();
-static ht_item* ht_new_item(const char* k, const char* v);
-static void ht_del_item(ht_item* i);
 void ht_del_hash_table(ht_hash_table* ht);
+void ht_insert(ht_hash_table* ht, const char* key, const char* value);
+char* ht_search(ht_hash_table* ht, const char* key);
+void ht_delete(ht_hash_table* h, const char* key);
 
 #endif //HASH_TABLE_C_HASH_TABLE_H
